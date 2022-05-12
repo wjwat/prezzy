@@ -1,16 +1,81 @@
-\REDFG                    /_____/\ /_____/\ /_____/\  /___/\/__/\ /_____/\ /_/\/_/\ 
-\REDFG                    \:::_ \ \\:::_ \ \\:::_ \ \ \::.\ \\ \ \\:::_ \ \\ \ \ \ \  
-\REDFG                     \:(_) \ \\:\ \ \ \\:(_) ) )_\:: \/_) \ \\:(_) \ \\:\_\ \ \ 
-\REDFG                      \: ___\/ \:\ \ \ \\: __ `\ \\:. __  ( ( \: ___\/ \::::_\/ 
-\REDFG                       \ \ \    \:\_\ \ \\ \ `\ \ \\: \ )  \ \ \ \ \     \::\ \ 
-\REDFG                        \_\/     \_____\/ \_\/ \_\/ \__\/\__\/  \_\/      \__\/ 
-                                     \REDBG\YELLOWFG IT REALLY COOKS THE BACON \RESET_ALL
+\RF                      /_____/\ /_____/\ /_____/\  /___/\/__/\ /_____/\ /_/\/_/\ 
+\RF                      \:::_ \ \\:::_ \ \\:::_ \ \ \::.\ \\ \ \\:::_ \ \\ \ \ \ \  
+\RF                       \:(_) \ \\:\ \ \ \\:(_) ) )_\:: \/_) \ \\:(_) \ \\:\_\ \ \ 
+\RF                        \: ___\/ \:\ \ \ \\: __ `\ \\:. __  ( ( \: ___\/ \::::_\/ 
+\RF                         \ \ \    \:\_\ \ \\ \ `\ \ \\: \ )  \ \ \ \ \     \::\ \ 
+\RF                          \_\/     \_____\/ \_\/ \_\/ \__\/\__\/  \_\/      \__\/ 
+\TC\RB\YF IT REALLY COOKS THE BACON \RA
 ---
 * Python
 * API calls
 * Click
 * Black
 * Flake8
+* A super long line that I have no idea if this will work, but I'm willing to give it a shot.
 ---
+\TC\BR\BLF\BB THANKS Y'ALL \RA
+
+         \YFAlex Adamovic\RA                      Anastasiia Riabets                    \RFAndrew Henderson\RA
+         \RFAndy Plymate\RA                       Brenna Lavin                          Chase Stokes
+         Daniel Lindsey                     Eric Crudup                           Hayley Mcvay
+         Isaac Overstreet                   Jake Haley                            \YFJase Seeley\RA
+         Jessi Baker                        \RFJosh Tillinghast\RA                      Justin Dechow
+         Kevin Williams                     Liam Eller                            Marisa Edgar
+         Matt Eilar                         Mikah Mathews                         \YFRiley Shimp\RA
+         Ryan Ashby                         \YB\RFRyan Bass\RA                             Ryan Spencer
+         Sarah Espinet                      Tiffany Herban Rodrigo                Will Greenberg
+\TC\RFWilliam Jameson\RA                              Zachary Green
+
+
+\TCOur Lower Cohort (Trees!) / The part-timers I didn't get to know!
+
+\TCErik I. / Louie S. / Chris Y. / Cathy B. / Veronica / Patrick / Ryan D. / Jasmine / Cameron / Char
+\TCThe rest of the Epicodus staff
+
+\TCDallas Slaughter
+
+\TCAnd especially my loving wife
+\TC❤Lexie❤
 ---
-\REDFGN\BLUEFGI\YELLOWBGC\CYANBGE\RESET_ALL COCK BRO.
+;,:kxkxO0OkkxOddolkOkdodOko:dX00K00kloKKKKKXXXX0Oxxx:cdOXXXXXXK0kdlkXXXXKOxXXOKKKOkOXKKK0KKKOkkO000KK0K00
+0dxkKKK00OOxkOkKkooddxdd0Ol;d0KKKXXXXXKKKKXXXKKXKxxo:;XXXXX0kkkxdclolodoolllc:ldolok0KKXx0OK0kkkKKKXKKKKX
+KKKKKK0OOxk00kkO0xo0Oxdod0o;k0O0KKKKKKKKKXNNNNNNNX0Okk00000OOOOOOddxxkkkkOOO0O0XKXXKXXXNKXKNkxxKKK00KK0K0
+0KK00000OkOkkOOxO0dOkxdooOcckkkOO0000000K0WWNXXXNXKXXkxkkO00KK000OOkkkxkKKKXdddddddddodddolccddddoKKKXKK0
+KK000KK0K00xdkkxkdokkxxdxOdodkkkxkkkkOkkkk00000k0XNWWNXXX0OXNXXXX000OkkOkdodololdcllclloolclldooddXK000KK
+K0O0000OkO0OKKK00KK0KXNNNNXNNNNNXxo;.','..,,'..,;;:dONWNXNNWNXXKX00XWKK0kOOxdoooooloclooollolooododkkk0O0
+lccllllccclollodddddxxkkxO0000kl,;,.:,......,;;',::,;'oWNNXWXNXKKK0KNXO0kOOkxxdoollocclooccllolllllclllll
+ooooooooddddxxkkOOOO0O000KKKKXl,;:;;..'.....'';;.;,,;'kWNNNKXXKXXKKKK0OOO0Oxxxooooooloooololodoooollollll
+KKKKXXXXXXXXKXXXKKKXXXXXNXNNNNK:,,c..','......':,,,;;;kWWNNNNNXXXXKXXX0K000OOOkkkkxkxxkkkxkkkkkkkOKKKKKKK
+OOOOOOOOOOOOOO0OOOOO00O000000OO,.;oc::;'.,,',,,;;;;,,'oNXXNXXNXXKXXXNKXXXXKXXKKXKKXXXXKNXX0WWNNXNXXXXKKK0
+OOOOO0OOOOOkOOkkOOOkOkOOOOOOkOl:dKdcl'...';;;:,;,;:;;o0XKXKKKKXKXKXKXXXXNNNKK0KXNKKKXXO0XK00O0kxddO0KK0K0
+OkO0OOOO0OO0OOOkOk0OO0O0000XK0x;ldkd;.. ..,c;:;,,;;::;KXO0XKXNXNXKk0NWWWWNNNNXNXNNXXX00NNONK0KXKXkd0K0000
+OOOOOO0OOO0O0O0kOOkdkO00kO0dl::kkK0k;.  ..;c::,'',:,,;,lxKK0KXX0K0KO00Kk00OOX0KOK00OkKkdKKK00XK0OKc:kX00K
+OOO0OOOkOOOOOOOOO0X0dxOllOxlokx0xOXX;.....;:'',,'.',,',;lcxKKKKKXKKx00KX0XXX0XXX0KKK0OK00K000KNXkxllxk000
+OOOkOOkO0OOO00K0KXXkxddlOKkxkkOkxO00Kcc:.'...,'....,,,',:cclXK0OkO00kOK0O0OKK00K0KKXK0kkOxO0O0KNk;cxO0K0K
+0K0000KKK00O0K000OOxOkkxOx00OOkOkkOdKk;''..','....,,,''',;::lOOOOOk0XKKK0K000KKK00OOOO00OkdkkkkOx::xKK00O
+XXXXXXXXXXXXXXXXXXXXXXXNNXNXNXXXXNNNNNl..........,;;;,'',;:::lONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXXXXX0KNXNXX
+XXXXXXXXXXXXXXXXXXXXNNNNNNNNNNNNNNNNWxl::;,...''''',,'.'';::;:clONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNKXNNNN
+XXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNc:;:;,''''''.',''..',::,,;lll0NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXKXNNN
+XXXXXXXXNXNNNNNNNNNNNNNNNNNNNNNNNNNNK::,::'''''''',;;,'',;:c;,,:lc:oKNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXXNNN
+XXXXNNXNNNNNNNNNNNNNNNNNNNNNNNNNNXNNk:;cc,''',,,'',,,'...,;;:,';::::;l0NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNKXNN
+kkkkxkkkkkkkkxxkkkkkkkkkkkkkkkkkkkOOd::c;'..',,'..''''...','',;;;::;,,;o0KKKKXXXXXXXXNNNNNNNNNNNNNNNNN0XN
+oloooollllllollooooooollllllllllllllll::;,.......',;;,'.',;,,';,,,,''',,:oolllllllllllllllllloooooooooodx
+lllllllllllllllllllllllllllllllllllllll;,,.......'',,''..',,'';,,.''...';;oollllllllllllllllllllololloolx
+llllccccccccccllllcccccccccccccccccccccc;.'...'.....'....''.'';,'''.....,,:lollllllllllllllllllllllllllll
+cccccccccccccccclccccccccccccccccc:c:cccl:.'...'...',,''.,,,,''''.......,,;::lollllllllllllllllllllllllll
+cccccccc:::c::cccccccccccccccc::::cc:::cccl;,'..','.','..',,,'','......'.,,;,:cllccccllcllcccllllllllllll
+ccccccc::c:::::ccccccccccccc::ccccccccccccc;';,...',;,....','.','........',;,,c:clcccccccccccccccccllllll
+ccccccccccccccccccccccccccc:cccllllccccccccc'.',.''',c,..';;'..'.............,;ccclllllllllllllllllllllll
+:::::::::;,;::::::::::::::;;::c:c:::::::::::;...,',,,:,..',,....'.............',;:lolccccclllllllllllllll
+:::cc::::::::::cccccccccc::cccccccccccccccccl,''.;,,;c'...,,'..','..............';:clc::::::ccccccccccccc
+:::::::::;;:;;;::ccc:::::::::::::::::::::::::c''.;cl:c'..';;'..','...............';ccl:ccccccccccccccccc:
+::::::::::::::::cccc:::::::::::::::c::::cccc:c,'',llll...';;,..',,'....'..........';lcc::::::cccccccccc::
+::::::::::::::::ccccccccccc::cc:::ccccccccccccc,''lcll'..';:,...,,,.....  ........,,:ccccccccccccccccccc:
+:::::::::::::::::cccccccccc::cc::::cc::ccccccco;'.;lll'..';oc'.',;'...... ..'.....,:clcccccccccc:::ccc:::
+cccccccccccc::ccclccccclllcccccccccccccccccclllc..,oll'...cool:;;,'. ........'.....,:c,;cccccccc::ccccccc
+ccccccccccccclcllccccllllllllllllllccccllllllloc,'.col'..';::::::;.'..............';l:;,'''..',,''';;;,',
+cccccccccccccccccllllllllllcllllllllllllolllldl:'..ld:'..'','...',,'....''........,,c:,,,,,,::cc::clllccc
+llllccccccccllccllllllllllllllllllllllllolllo;;'.,;ll:'.,clll:::c::,'',,'....,',''..,;:::::cclllccclollcc
+llllllcllllllllllllllllllllllllllllllllllllo:,,,:,..,,..:clll:::c:;,,,,.......',;;,',:ccc::cllllcccllllcc
+lllllcllllllllllllllllllllllllllllllllllllccccc:'....,..::clc:::::;;,'',;,,''',,;;,,;:cccccclllccclllllcc
+oloooolllllllllllllllcllllolllollllllcclllllccclc;;::c:,:ccllc::::;,,'',,,'''',;;;;,;:ccc:cclllccccllllcc
