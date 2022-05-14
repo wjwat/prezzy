@@ -6,17 +6,34 @@ import sys
 from msvcrt import getch
 
 
-HELP = """
+
+
+HELP = """\TC\RB\WF\BR HELP \RA
 Q, q, Ctrl-C   QUIT
- --- 
 A, a, left     Previous Slide
 D, d, right    Next Slide
 W, w, up       Scroll up
 S, s, down     Scroll down
- ---
 E, e           Hide status line
 
+\TC================================================================================
+\TC\RB\WF\BR Prezzy File Tags \RA
 
+          \YF\BRForeground\RA:                  \YF\BRBackground\RA:                 \YF\BROther\RA:
+ Black:   \\ \bBLF       \WB\BLFExample\RA     |     \\ \bBLB      \BLB\WFExample\RA     |     \\ \bBR       \BRExample
+   Red:   \\ \bRF        \RFExample\RA     |     \\ \bRB       \RBExample\RA     |     \\ \bDI       \DIExample
+ Green:   \\ \bGF        \GFExample\RA     |     \\ \bGB       \GBExample\RA     |     \\ \bNO       \BRExam\\NOple
+Yellow:   \\ \bYF        \YFExample\RA     |     \\ \bYB       \YBExample\RA     |     \\ \bRA       \RB\YFExam\RAple
+  Blue:   \\ \bBF        \BFExample\RA     |     \\ \bBB       \BBExample\RA     |     \\ \bTC       See Below
+Maroon:   \\ \bMF        \MFExample\RA     |     \\ \bMB       \MBExample\RA     |     \\ \bTR       See Below
+  Cyan:   \\ \bCF        \CFExample\RA     |     \\ \bCB       \CBExample\RA
+ White:   \\ \bWF        \WFExample\RA     |     \\ \bWB       \WB\BLFExample\RA
+ Reset:   \\ \bRESF      \RFExam\RESFple     |     \\ \bRESB     \RBExam\RESBple\RA
+
+\TCCentered Text
+\TRRight aligned text
+
+\TC================================================================================
 \\TC\\RFPress any key to exit
 """
 
@@ -72,6 +89,11 @@ def parse_tags(line, columns):
   if "\\" in line:
     count = 0
 
+    # Help includes backspace char, account for the \b and the character that is
+    # removed.
+    backspace_count = line.count("\b")
+    count += backspace_count * 2
+
     for fgk, fgv in COLORS.items():
       temp_count = line.count(f"\\{fgk}")
 
@@ -91,17 +113,18 @@ def parse_tags(line, columns):
   return (line, count)
 
 
-def display_slide(slides, current_pos, offset):
+def display_slide(slides, current_pos, offset, status_line):
   columns, lines = os.get_terminal_size()
   top_bottom = Edges.corners + Edges.top_bottom * (columns - 2) + Edges.corners
   slide_lines = slides[current_pos].split("\n")
   slide_len = len(slide_lines)
+  line_offset = 3 if status_line else 2
 
   clear()
 
   print(top_bottom)
 
-  for i in range(lines - 3):
+  for i in range(lines - line_offset):
     if slide_len > lines and offset != 0:
       i += offset
 
@@ -113,7 +136,10 @@ def display_slide(slides, current_pos, offset):
     else:
       print(Edges.sides + " " * (columns - 2) + Edges.sides)
 
-  print(top_bottom)
+  if status_line:
+    print(top_bottom)
+  else:
+    print(top_bottom, end='\r')
 
 
 def main(file):
@@ -124,7 +150,7 @@ def main(file):
   status_line = True
 
   while True:
-    display_slide(slides, current_pos, current_offset)
+    display_slide(slides, current_pos, current_offset, status_line)
     columns, lines = os.get_terminal_size()
     current_slide_len = len(slides[current_pos].split("\n"))
 
@@ -153,7 +179,7 @@ def main(file):
       status_line = not status_line
     # Display Help: ?, F1
     elif key in (63, 59):
-      display_slide([HELP], 0, 0)
+      display_slide([HELP], 0, 0, status_line)
       getch()
     # QUIT: Qq, Ctrl-C
     elif key == 113 or key == 81 or key == 3:
