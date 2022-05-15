@@ -4,18 +4,18 @@
 \MF\TC██╔═══╝ ██║   ██║██╔══██╗██╔═██╗ ██╔═══╝   ╚██╔╝  
 \MF\TC██║     ╚██████╔╝██║  ██║██║  ██╗██║        ██║   
 \MF\TC╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝        ╚═╝   
-\TC\RB\YF IT REALLY COOKS THE BACON \RA
+\TC\RB\YF \ULIT REALLY COOKS THE BACON\OUL \RA
 
 \TC\BF ---===============--- \RA
 
-\BF$\RA porkpy -d com | jq
+\BF$\RA porkpy pricing -d com | jq
 {                                                                      *WOW!*
   "\GFstatus\RA": "\BFSUCCESS\RA",
   "\GFpricing\RA": {                                                               *HOW DOES HE DO THAT?*
     "\GFcom\RA": {
       "\GFregistration\RA": "\BF9.13\RA",
-      "\GFrenewal\RA": "9.13",              *I'M SO EXCITED I SHIT MY PANTS*
-      "\GFtransfer\RA": "9.13",
+      "\GFrenewal\RA": "\BF9.13\RA",              *I'M SO EXCITED I SHIT MY PANTS*
+      "\GFtransfer\RA": "\BF9.13\RA",
     }                                                 *I'M GOING TO  BUY A DOMAIN RIGHT NOW!*
   }
 }
@@ -47,7 +47,7 @@
 \TC           \YFiiiiiiii,,,,,,,,           
 \TC           \YFiiiiiiiiiii''iii           
 \TC           \YF`iiiiiiiiii..ii`           
-\TC             \YF`iiiiiiiiii`             
+\TC             \YF`iiiiiiiiii`            
 ---
 \TC\BR\BLF\BB THANKS Y'ALL \RA
 
