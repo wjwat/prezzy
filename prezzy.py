@@ -6,15 +6,13 @@ import sys
 from msvcrt import getch
 
 
-
-
 HELP = """\TC\RB\WF\BR HELP \RA
-Q, q, Ctrl-C   QUIT
-A, a, left     Previous Slide
-D, d, right    Next Slide
-W, w, up       Scroll up
-S, s, down     Scroll down
-E, e           Hide status line
+Q, q, Ctrl-C, ESC   QUIT
+A, a, left          Previous Slide
+D, d, right         Next Slide
+W, w, up            Scroll up
+S, s, down          Scroll down
+E, e                Hide status line
 
 \TC================================================================================
 \TC\RB\WF\BR Prezzy File Tags \RA
@@ -26,8 +24,8 @@ E, e           Hide status line
 Yellow:   \\ \bYF        \YFExample\RA     |     \\ \bYB       \YBExample\RA     |     \\ \bRA       \RB\YFExam\RAple
   Blue:   \\ \bBF        \BFExample\RA     |     \\ \bBB       \BBExample\RA     |     \\ \bTC       See Below
 Maroon:   \\ \bMF        \MFExample\RA     |     \\ \bMB       \MBExample\RA     |     \\ \bTR       See Below
-  Cyan:   \\ \bCF        \CFExample\RA     |     \\ \bCB       \CBExample\RA
- White:   \\ \bWF        \WFExample\RA     |     \\ \bWB       \WB\BLFExample\RA
+  Cyan:   \\ \bCF        \CFExample\RA     |     \\ \bCB       \CBExample\RA     |     \\ \bUL       \\ULExample\\OUL
+ White:   \\ \bWF        \WFExample\RA     |     \\ \bWB       \WB\BLFExample\RA     |     \\ \bOUL      \\ULExam\\OULple
  Reset:   \\ \bRESF      \RFExam\RESFple     |     \\ \bRESB     \RBExam\RESBple\RA
 
 \TCCentered Text
@@ -64,6 +62,8 @@ COLORS = {
   "DI" : "\033[2m",  # Dim
   "NO" : "\033[22m", # Normal
   "RA" : "\033[0m",  # Reset all
+  "UL" : "\033[4m", # Underline
+  "OUL" : "\033[24m", # Underline Off
 }
 
 
@@ -103,12 +103,17 @@ def parse_tags(line, columns):
       count += temp_count * len(fgv)
       line = line.replace(f"\\{fgk}", f"{fgv}")
 
+  # These two are semi-broken in that putting them anywhere in a line will make
+  # that whole line either centered, or right aligned. Putting them both in a
+  # line will end up with that line right-aligned.
+  dist = columns + count
+
   if "\\TC" in line:
     line = line.replace("\\TC", "")
-    line = " " * (math.floor((columns - len(line) + count) / 2)) + line
+    line = f"{line:^{dist}}"
   elif "\\TR" in line:
     line = line.replace("\\TR", "")
-    line = " " * (columns - len(line) + count) + line
+    line = f"{line:>{dist}}"
 
   return (line, count)
 
@@ -129,12 +134,12 @@ def display_slide(slides, current_pos, offset, status_line):
       i += offset
 
     if i < slide_len:
-      t, c = parse_tags(slide_lines[i], columns - 4)
-      line_len = len(t)
-      l = f"{Edges.sides} " + t + " " * (columns - line_len - 4 + c) + f" \033[0m{Edges.sides}"
-      print(l)
+      text, count = parse_tags(slide_lines[i], columns - 4)
+      line = f"{Edges.sides} {text:<{(columns - 4 + count)}} \033[0m{Edges.sides}"
+      print(line)
     else:
-      print(Edges.sides + " " * (columns - 2) + Edges.sides)
+      line = f"{Edges.sides}{Edges.sides:>{columns - 1}}"
+      print(line)
 
   if status_line:
     print(top_bottom)
@@ -155,22 +160,31 @@ def main(file):
     current_slide_len = len(slides[current_pos].split("\n"))
 
     if status_line:
-      print(f"SLIDE {current_pos + 1} of {slides_len} : {columns} x {lines} | OFFSET: {current_offset} / {current_slide_len}", end="\r")
+      temp_line = f"SLIDE {current_pos + 1} of {slides_len} | " + \
+        f"{columns} x {lines} | OFFSET: {current_offset} / {current_slide_len}"
+
+      if current_slide_len > lines and (current_offset + lines - 3) < current_slide_len:
+        temp_line += " (MORE)"
+
+      dist = columns - len(temp_line)
+      temp_line = f"{temp_line}{'Press F1 for help':>{dist}}"
+
+      print(temp_line, end="\r")
 
     key = ord(getch())
 
-    # Next Slide: Dd
+    # Next Slide: Dd, right
     if key in (100, 68, 77):
       current_pos = min(current_pos + 1, slides_len - 1)
       current_offset = 0
-    # Previous Slide: Aa
+    # Previous Slide: Aa, left
     elif key in (97, 70, 75):
       current_pos = max(current_pos - 1, 0)
       current_offset = 0
-    # Scroll up: Ww
+    # Scroll up: Ww, up
     elif key in (119, 87, 72):
       current_offset = max(current_offset - 3, 0)
-    # Scroll Down: Ss
+    # Scroll Down: Ss, down
     elif key in (115, 83, 80):
       if current_slide_len > lines:
         current_offset = min(current_offset + 3, current_slide_len - 3)
@@ -181,8 +195,8 @@ def main(file):
     elif key in (63, 59):
       display_slide([HELP], 0, 0, status_line)
       getch()
-    # QUIT: Qq, Ctrl-C
-    elif key == 113 or key == 81 or key == 3:
+    # QUIT: Qq, Ctrl-C, ESC
+    elif key in (113, 81, 3, 27):
       print("\033[0m")
       clear()
       return
