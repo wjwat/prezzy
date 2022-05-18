@@ -1,0 +1,34 @@
+\TC\YF██████╗ ██████╗ ███████╗███████╗███████╗██╗   ██╗\RA
+\TC\YF██╔══██╗██╔══██╗██╔════╝╚══███╔╝╚══███╔╝╚██╗ ██╔╝\RA
+\TC\YF██████╔╝██████╔╝█████╗    ███╔╝   ███╔╝  ╚████╔╝ \RA
+\TC\YF██╔═══╝ ██╔══██╗██╔══╝   ███╔╝   ███╔╝    ╚██╔╝  \RA
+\TC\YF██║     ██║  ██║███████╗███████╗███████╗   ██║   \RA
+\TC\YF╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝   ╚═╝   \RA
+
+\TC\RB\WF\BR HELP \RA
+Q, q, Ctrl-C, ESC   QUIT
+A, a, left          Previous Slide
+D, d, right         Next Slide
+W, w, up            Scroll up
+S, s, down          Scroll down
+E, e                Hide status line
+F1, ?               Help screen
+
+\TC================================================================================
+\TC\RB\WF\BR Prezzy File Tags \RA
+
+          \YF\BRForeground\RA:                  \YF\BRBackground\RA:                 \YF\BROther\RA:
+ Black:   BLF       \WB\BLFExample\RA     |     BLB      \BLB\WFExample\RA     |     BR       \BRExample
+   Red:   RF        \RFExample\RA     |     RB       \RBExample\RA     |     DI       \DIExample
+ Green:   GF        \GFExample\RA     |     GB       \GBExample\RA     |     NO       \BRExam\NOple
+Yellow:   YF        \YFExample\RA     |     YB       \YBExample\RA     |     RA       \RB\YFExam\RAple
+  Blue:   BF        \BFExample\RA     |     BB       \BBExample\RA     |     TC       See Below
+Maroon:   MF        \MFExample\RA     |     MB       \MBExample\RA     |     TR       See Below
+  Cyan:   CF        \CFExample\RA     |     CB       \CBExample\RA     |     UL       \ULExample\OUL
+ White:   WF        \WFExample\RA     |     WB       \WB\BLFExample\RA     |     OUL      \ULExam\OULple
+ Reset:   RESF      \RFExam\RESFple     |     RESB     \RBExam\RESBple\RA
+
+\TCCentered Text
+\TRRight aligned text
+
+\TC================================================================================
