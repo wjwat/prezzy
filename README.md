@@ -47,3 +47,4 @@ Maroon:   \MF         |  \MB         |  \TR : Text Right
 
 - Add in key names so we can use those instead of their ordinal values
 - Move everything into a class
+- Add support or OSes besides Windows.
