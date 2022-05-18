@@ -2,6 +2,8 @@
 
 A no-dependency, sort-of okay, terminal presentation app.
 
+![Example screenshot](screenshot.png)
+
 ## Usage
 
 Run Prezzy with Python like so:
@@ -38,10 +40,6 @@ Maroon:   \MF         |  \MB         |  \TR : Text Right
  White:   \WF         |  \WB         |  \OUL : Reset Underline
  Reset:   \RESF       |  \RESB
  ```
-
-## Example
-
-![Example screenshot](screenshot.png)
 
 ## Gotta love a good list
 
