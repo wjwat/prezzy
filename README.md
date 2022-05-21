@@ -2,6 +2,8 @@
 
 A no-dependency, sort-of okay, terminal presentation app.
 
+**Currently only works on Windows**
+
 ![Example screenshot](screenshot.png)
 
 ## Usage
